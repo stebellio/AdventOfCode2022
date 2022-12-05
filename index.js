@@ -3,6 +3,7 @@ const fs = require('fs');
 const day1 = require('./1/solution.js');
 const day2 = require('./2/solution.js');
 const day3 = require('./3/solution.js');
+const day4 = require('./4/solution.js');
 
 // File mapping
 const runner = {
@@ -17,6 +18,10 @@ const runner = {
     3: {
         1: day3.part1,
         2: day3.part2
+    },
+    4: {
+        1: day4.part1,
+        2: day4.part2
     }
 };
 
