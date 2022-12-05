@@ -1,12 +1,17 @@
 // RUN SPECIFIC PUZZLE - node index.js 1-1 (day - part)
 const fs = require('fs');
 const day1 = require('./1/solution.js');
+const day2 = require('./2/solution.js');
 
 // File mapping
 const runner = {
     1: {
         1: day1.part1,
         2: day1.part2
+    },
+    2: {
+        1: day2.part1,
+        2: day2.part2
     }
 };
 
@@ -20,5 +25,5 @@ fs.readFile(`${day}/input.txt`, 'utf8', (err, data) => {
 
     // Run
     const result = runner[day][part](data);
-    console.log(result);
+    console.log('Result: ', result);
 });
