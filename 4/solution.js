@@ -5,8 +5,10 @@ const part1 = (rawData) => {
     data.forEach((couples) => {
         const first = couples[0];
         const second = couples[1];
-        if ((first.end <= second.end && first.start >= second.start) || // first is into second
-            (second.end <= first.end && second.start >= first.start)) {
+        if (
+            (first.end <= second.end && first.start >= second.start) || // first is into second
+            (second.end <= first.end && second.start >= first.start)) // second is into first
+        {
             fullyContainerPairs++;
         }
     });
